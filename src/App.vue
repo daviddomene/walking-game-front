@@ -17,7 +17,7 @@ body {
   font-family: 'Raleway', sans-serif;
   color: rgba(255, 253, 253, 1) !important;
   display: flex;
-  flex-direction: column; /* Útil si tienes más contenido */
+  flex-direction: column;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

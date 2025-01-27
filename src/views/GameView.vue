@@ -1,7 +1,6 @@
 <template>
     <div class="row col-md-12">
-        <!-- Modal de selección de personaje -->
-        <div>
+    <div>
     <!-- Modal de selección de personaje -->
     <div v-if="showCharacterModal" class="modal-overlay d-flex justify-content-center align-items-center">
       <div class="modal-content container p-4 rounded" style="max-width: 800px;">
@@ -132,14 +131,14 @@ export default {
                 { id: 5, name: "Player 5", image: player5 },
                 { id: 6, name: "Player 6", image: player6 },
             ],
-            inputWidth: 0, // Valor inicial para el ancho ingresado por el usuario
-            inputHeight: 0, // Valor inicial para el alto ingresado por el usuario
-            width: 0, // Dimensión del tablero (ancho)
-            height: 0, // Dimensión del tablero (alto)
-            isLoaded: false, // Indica si el tablero debe renderizarse
-            showModal: false, // Indica si el modal está abierto
+            inputWidth: 0, 
+            inputHeight: 0, 
+            width: 0, 
+            height: 0, 
+            isLoaded: false, 
+            showModal: false, 
             playerName: '',
-            playerPositions: [], // Almacenaremos las posiciones del jugador
+            playerPositions: [], 
         };
     },
     methods: {
@@ -305,17 +304,14 @@ export default {
       } catch (error) {
         console.error('Error updating player position:', error);
 
-        // Obtener el elemento .item y agregar la clase de vibración
+
         const itemElements = document.querySelectorAll('.item');
         
-        // Agregar la clase 'vibrate' a todos los elementos .item
         itemElements.forEach(item => {
             item.classList.add('vibrate');
-            
-            // Remover la clase después de 0.2 segundos (duración de la animación)
             setTimeout(() => {
                 item.classList.remove('vibrate');
-            }, 200); // El tiempo de duración de la vibración en ms
+            }, 200); 
         });
 
       }
